@@ -28,8 +28,11 @@ export default function Login() {
           Best app to find services near you which delivers professional
           services
         </Text>
-        <TouchableOpacity style={styles.button}>
-          <Text style={{ textAlign: "center", fontSize: 15 }}>
+        <TouchableOpacity
+          style={styles.button}
+          onPress={() => console.log("button Click")}
+        >
+          <Text style={{ textAlign: "center", fontSize: 15, color: "#8E3FFF" }}>
             Lets Get Started
           </Text>
         </TouchableOpacity>
@@ -51,7 +54,7 @@ const styles = StyleSheet.create({
   subContainer: {
     // width: "100%",
     width: 360,
-    backgroundColor: "red",
+    backgroundColor: "#8E3FFF",
     height: "70%",
     marginTop: -20,
     borderTopRightRadius: 30,
@@ -59,9 +62,10 @@ const styles = StyleSheet.create({
     padding: 20,
   },
   button: {
-    padding: 15,
     backgroundColor: "white",
-    borderRadius: 99,
-    marginTop: 40,
+    paddingVertical: 12,
+    borderRadius: 5,
+    height: 50,
+    marginTop: 90,
   },
 });
