@@ -28,11 +28,11 @@ export default function Login() {
           Best app to find services near you which delivers professional
           services
         </Text>
-        <View style={styles.button}>
+        <TouchableOpacity style={styles.button}>
           <Text style={{ textAlign: "center", fontSize: 15 }}>
             Lets Get Started
           </Text>
-        </View>
+        </TouchableOpacity>
       </View>
     </View>
   );
