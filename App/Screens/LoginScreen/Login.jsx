@@ -10,9 +10,11 @@ export default function Login() {
         source={require("./../../../assets/Images/3.jpg")}
       />
       <View style={styles.subContainer}>
-        <Text style={{ fontSize: 26, color: "white", textAlign: "center" }}>
+        <Text style={styles.subContainerText}>
           Lets find{" "}
-          <Text style={{ fontWeight: "bold" }}>
+          <Text
+            style={{ fontWeight: "bold", color: "gold", fontStyle: "italic" }}
+          >
             Professional Cleaning and repair
           </Text>{" "}
           Services
@@ -60,6 +62,11 @@ const styles = StyleSheet.create({
     borderTopRightRadius: 30,
     borderTopLeftRadius: 30,
     padding: 20,
+  },
+  subContainerText: {
+    fontSize: 26,
+    color: "white",
+    textAlign: "center",
   },
   button: {
     backgroundColor: "white",
