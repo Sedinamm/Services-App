@@ -1,5 +1,6 @@
 import { View, Text, Image, StyleSheet } from "react-native";
 import React from "react";
+import Colors from "../../Utils/Colors";
 
 export default function Login() {
   return (
@@ -19,6 +20,6 @@ const styles = StyleSheet.create({
     height: 450,
     marginTop: 70,
     borderWidth: 4,
-    borderColor: "#000",
+    borderColor: Colors.BLACK,
   },
 });
