@@ -12,9 +12,7 @@ export default function Login() {
       <View style={styles.subContainer}>
         <Text style={styles.subContainerText}>
           Lets find{" "}
-          <Text
-            style={{ fontWeight: "bold", color: "gold", fontStyle: "italic" }}
-          >
+          <Text style={styles.subContainerTextEdited}>
             Professional Cleaning and repair
           </Text>{" "}
           Services
@@ -67,6 +65,11 @@ const styles = StyleSheet.create({
     fontSize: 26,
     color: "white",
     textAlign: "center",
+  },
+  subContainerTextEdited: {
+    fontWeight: "bold",
+    color: "gold",
+    fontStyle: "italic",
   },
   button: {
     backgroundColor: "white",
