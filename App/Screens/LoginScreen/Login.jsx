@@ -35,9 +35,12 @@ export default function Login() {
 const styles = StyleSheet.create({
   loginImage: {
     alignItems: "center",
+    // width: 230,
+    // height: 380,
     width: 230,
     height: 450,
-    marginTop: 70,
+    marginTop: 90,
+    marginBottom: 30,
     borderWidth: 4,
     borderColor: "black",
     borderRadius: 15,
