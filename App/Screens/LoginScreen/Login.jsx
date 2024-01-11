@@ -43,10 +43,10 @@ const styles = StyleSheet.create({
     borderRadius: 15,
   },
   subContainer: {
-    // width: "100%",
+    width: "100%",
     width: 360,
     backgroundColor: "#8E3FFF",
-    height: "70%",
+    height: "50%",
     marginTop: -20,
     borderTopRightRadius: 30,
     borderTopLeftRadius: 30,
@@ -74,7 +74,7 @@ const styles = StyleSheet.create({
     paddingVertical: 12,
     borderRadius: 5,
     height: 50,
-    marginTop: 90,
+    marginTop: 50,
   },
   buttonText: {
     textAlign: "center",
