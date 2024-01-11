@@ -17,14 +17,7 @@ export default function Login() {
           </Text>{" "}
           Services
         </Text>
-        <Text
-          style={{
-            fontSize: 18,
-            color: "white",
-            textAlign: "center",
-            marginTop: 20,
-          }}
-        >
+        <Text style={styles.description1}>
           Best app to find services near you which delivers professional
           services
         </Text>
@@ -32,9 +25,7 @@ export default function Login() {
           style={styles.button}
           onPress={() => console.log("button Click")}
         >
-          <Text style={{ textAlign: "center", fontSize: 15, color: "#8E3FFF" }}>
-            Lets Get Started
-          </Text>
+          <Text style={styles.buttonText}>Lets Get Started</Text>
         </TouchableOpacity>
       </View>
     </View>
@@ -62,14 +53,21 @@ const styles = StyleSheet.create({
     padding: 20,
   },
   subContainerText: {
-    fontSize: 26,
+    fontSize: 23,
     color: "white",
     textAlign: "center",
+    marginTop: 10,
   },
   subContainerTextEdited: {
     fontWeight: "bold",
     color: "gold",
     fontStyle: "italic",
+  },
+  description1: {
+    fontSize: 15,
+    color: "white",
+    textAlign: "center",
+    marginTop: 20,
   },
   button: {
     backgroundColor: "white",
@@ -77,5 +75,10 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     height: 50,
     marginTop: 90,
+  },
+  buttonText: {
+    textAlign: "center",
+    fontSize: 15,
+    color: "#8E3FFF",
   },
 });
