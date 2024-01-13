@@ -1,8 +1,29 @@
 import { View, Text, Image, StyleSheet, TouchableOpacity } from "react-native";
 import React from "react";
 import Colors from "../../Utils/Colors";
+import * as WebBrowser from "expo-web-browser";
+import { useWarmUpBrowser } from "../../hooks/warmUpBrowser";
+import { useOAuth } from "@clerk/clerk-expo";
+// import { Button } from "react-native";
+WebBrowser.maybeCompleteAuthSession();
 
 export default function Login() {
+  useWarmUpBrowser();
+  const { startOAuthFlow } = useOAuth({ strategy: "oauth_google" });
+  const onPress = React.useCallback(async () => {
+    try {
+      const { createdSessionId, signIn, signUp, setActive } =
+        await startOAuthFlow();
+
+      if (createdSessionId) {
+        setActive({ session: createdSessionId });
+      } else {
+        // Use signIn or signUp for next steps such as MFA
+      }
+    } catch (err) {
+      console.error("OAuth error", err);
+    }
+  }, []);
   return (
     <View style={{ alignItems: "center" }}>
       <Image
@@ -21,10 +42,7 @@ export default function Login() {
           Best app to find services near you which delivers professional
           services
         </Text>
-        <TouchableOpacity
-          style={styles.button}
-          onPress={() => console.log("button Click")}
-        >
+        <TouchableOpacity style={styles.button} onPress={onPress}>
           <Text style={styles.buttonText}>Lets Get Started</Text>
         </TouchableOpacity>
       </View>
