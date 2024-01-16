@@ -6,8 +6,8 @@ const Tab = createBottomTabNavigator();
 
 export default function TabNavigation() {
   return (
-    <View>
-      <Text>TabNavigation</Text>
-    </View>
+    <Tab.Navigator>
+      <Tab.Screen name="home" component={HomeScreen} />
+    </Tab.Navigator>
   );
 }
