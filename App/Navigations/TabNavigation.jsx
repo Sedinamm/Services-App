@@ -5,6 +5,8 @@ import HomeScreen from "../Screens/HomeScreen/HomeScreen";
 import ProfileScreen from "../Screens/ProfileScreen/ProfileScreen";
 import BookingScreen from "../Screens/BookingScreen/BookingScreen";
 
+import { MaterialIcons } from "@expo/vector-icons";
+
 const Tab = createBottomTabNavigator();
 
 export default function TabNavigation() {
@@ -22,6 +24,9 @@ export default function TabNavigation() {
             <Text style={{ color: color, fontSize: 12, marginTop: -7 }}>
               Home
             </Text>
+          ),
+          tabBarIcon: ({ color, size }) => (
+            <MaterialIcons name="home" size={size} color={color} />
           ),
         }}
       />
