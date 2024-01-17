@@ -14,7 +14,17 @@ export default function TabNavigation() {
         headerShown: false,
       }}
     >
-      <Tab.Screen name="home" component={HomeScreen} />
+      <Tab.Screen
+        name="home"
+        component={HomeScreen}
+        options={{
+          tabBarLabel: ({ color }) => (
+            <Text style={{ color: color, fontSize: 12, marginTop: -7 }}>
+              Home
+            </Text>
+          ),
+        }}
+      />
       <Tab.Screen name="booking" component={BookingScreen} />
       <Tab.Screen name="profile" component={ProfileScreen} />
     </Tab.Navigator>
