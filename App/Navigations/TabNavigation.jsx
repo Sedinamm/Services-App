@@ -45,7 +45,20 @@ export default function TabNavigation() {
           ),
         }}
       />
-      <Tab.Screen name="profile" component={ProfileScreen} />
+      <Tab.Screen
+        name="profile"
+        component={ProfileScreen}
+        options={{
+          tabBarLabel: ({ color }) => (
+            <Text style={{ color: color, fontSize: 12, marginTop: -7 }}>
+              Profile
+            </Text>
+          ),
+          tabBarIcon: ({ color, size }) => (
+            <FontAwesome name="user-circle" size={size} color={color} />
+          ),
+        }}
+      />
     </Tab.Navigator>
   );
 }
