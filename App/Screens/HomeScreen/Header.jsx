@@ -6,7 +6,7 @@ export default function Header() {
   const { user, isLoading } = useUser();
   return (
     user && (
-      <View>
+      <View style={styles.container}>
         <View>
           <Image source={{ uri: user?.imageUrl }} style={styles.userImage} />
           <View></View>
@@ -17,8 +17,13 @@ export default function Header() {
 }
 
 const styles = StyleSheet.create({
+  container: {
+    padding: 20,
+    paddingTop: 40,
+  },
   userImage: {
     width: 45,
     height: 45,
+    borderRadius: 99,
   },
 });
