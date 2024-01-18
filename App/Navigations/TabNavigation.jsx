@@ -6,6 +6,7 @@ import ProfileScreen from "../Screens/ProfileScreen/ProfileScreen";
 import BookingScreen from "../Screens/BookingScreen/BookingScreen";
 
 import { MaterialIcons } from "@expo/vector-icons";
+import { FontAwesome } from "@expo/vector-icons";
 
 const Tab = createBottomTabNavigator();
 
@@ -40,7 +41,7 @@ export default function TabNavigation() {
             </Text>
           ),
           tabBarIcon: ({ color, size }) => (
-            <MaterialIcons name="home" size={size} color={color} />
+            <FontAwesome name="bookmark" size={size} color={color} />
           ),
         }}
       />
