@@ -22,7 +22,9 @@ export default function Header() {
           <FontAwesome name="bookmark-o" size={27} color="white" />
         </View>
         {/* Search Bar Section */}
-        <View></View>
+        <View style={styles.searchBarContainer}>
+          <TextInput placeholder="Search" style={styles.textInput} />
+        </View>
       </View>
     )
   );
@@ -52,5 +54,15 @@ const styles = StyleSheet.create({
     width: 45,
     height: 45,
     borderRadius: 99,
+  },
+  searchBarContainer: {
+    marginTop: 15,
+  },
+  textInput: {
+    padding: 7,
+    paddingHorizontal: 16,
+    backgroundColor: "white",
+    borderRadius: 8,
+    width: "85%",
   },
 });
