@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet, Image } from "react-native";
+import { View, Text, StyleSheet, Image, TextInput } from "react-native";
 import React from "react";
 import { useUser } from "@clerk/clerk-expo";
 import { FontAwesome } from "@expo/vector-icons";
@@ -22,6 +22,7 @@ export default function Header() {
           <FontAwesome name="bookmark-o" size={27} color="white" />
         </View>
         {/* Search Bar Section */}
+        <View></View>
       </View>
     )
   );
