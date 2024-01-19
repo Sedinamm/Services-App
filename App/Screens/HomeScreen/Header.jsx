@@ -8,14 +8,17 @@ export default function Header() {
   return (
     user && (
       <View style={styles.container}>
-        <View style={styles.profileContainer}>
-          <Image source={{ uri: user?.imageUrl }} style={styles.userImage} />
-          <View>
-            <Text style={{ color: "white" }}>Welcome</Text>
-            <Text style={{ color: "white", fontSize: 20 }}>
-              {user?.fullName}
-            </Text>
+        <View style={styles.profileMainContainer}>
+          <View style={styles.profileContainer}>
+            <Image source={{ uri: user?.imageUrl }} style={styles.userImage} />
+            <View>
+              <Text style={{ color: "white" }}>Welcome</Text>
+              <Text style={{ color: "white", fontSize: 20 }}>
+                {user?.fullName}
+              </Text>
+            </View>
           </View>
+          <FontAwesome name="bookmark-o" size={27} color="white" />
         </View>
       </View>
     )
@@ -29,6 +32,12 @@ const styles = StyleSheet.create({
     backgroundColor: "blue",
     borderBottomLeftRadius: 25,
     borderBottomRightRadius: 25,
+  },
+  profileMainContainer: {
+    display: "flex",
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
   },
   profileContainer: {
     display: "flex",
