@@ -8,6 +8,7 @@ export default function Header() {
   return (
     user && (
       <View style={styles.container}>
+        {/* Profile Header Section */}
         <View style={styles.profileMainContainer}>
           <View style={styles.profileContainer}>
             <Image source={{ uri: user?.imageUrl }} style={styles.userImage} />
@@ -20,6 +21,7 @@ export default function Header() {
           </View>
           <FontAwesome name="bookmark-o" size={27} color="white" />
         </View>
+        {/* Search Bar Section */}
       </View>
     )
   );
