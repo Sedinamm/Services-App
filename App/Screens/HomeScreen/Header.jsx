@@ -13,9 +13,15 @@ export default function Header() {
           <View style={styles.profileContainer}>
             <Image source={{ uri: user?.imageUrl }} style={styles.userImage} />
             <View>
-              <Text style={{ color: "white" }}>Welcome</Text>
+              <Text style={{ color: "white", fontFamily: "outfit" }}>
+                Welcome
+              </Text>
               <Text
-                style={{ color: "white", fontSize: 20, fontFamily: "outfit" }}
+                style={{
+                  color: "white",
+                  fontSize: 20,
+                  fontFamily: "outfit-medium",
+                }}
               >
                 {user?.fullName}
               </Text>
