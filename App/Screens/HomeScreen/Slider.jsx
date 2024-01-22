@@ -1,9 +1,9 @@
-import { View, Text } from "react-native";
+import { View, Text, StyleSheet } from "react-native";
 import React, { useEffect, useState } from "react";
 import GlobalApi from "../../Utils/GlobalApi";
 
 export default function Slider() {
-  const [slider, setSlider] = useState();
+  const [slider, setSlider] = useState([]);
   useEffect(() => {
     getSliders();
   }, []);
@@ -15,7 +15,15 @@ export default function Slider() {
   };
   return (
     <View>
-      <Text>Slider</Text>
+      <Text style={styles.textHeading}>Special Offers For You</Text>
     </View>
   );
 }
+
+const styles = StyleSheet.create({
+  textHeading: {
+    fontSize: 20,
+    fontFamily: "outfit-medium",
+    marginBottom: 10,
+  },
+});

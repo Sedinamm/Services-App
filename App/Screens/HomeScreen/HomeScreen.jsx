@@ -9,7 +9,9 @@ export default function HomeScreen() {
       {/* Header */}
       <Header />
       {/* Slider */}
-      <Slider />
+      <View style={{ padding: 20 }}>
+        <Slider />
+      </View>
     </View>
   );
 }
