@@ -42,7 +42,7 @@ const styles = StyleSheet.create({
   },
   sliderImage: {
     width: 270,
-    height: 150,
+    height: 160,
     borderRadius: 20,
     // objectFit: "contain",
   },
