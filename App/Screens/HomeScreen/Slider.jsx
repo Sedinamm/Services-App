@@ -38,7 +38,7 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontFamily: "outfit-medium",
     marginBottom: 10,
-    color: "white",
+    // color: "white",
   },
   sliderImage: {
     width: 270,
