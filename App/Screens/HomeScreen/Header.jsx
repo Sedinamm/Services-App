@@ -20,6 +20,7 @@ export default function Header() {
                 style={{
                   color: "white",
                   fontSize: 20,
+                  // fontFamily: "helvetica",
                   fontFamily: "outfit-medium",
                 }}
               >
