@@ -38,11 +38,12 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontFamily: "outfit-medium",
     marginBottom: 10,
+    color: "white",
   },
   sliderImage: {
     width: 270,
     height: 150,
     borderRadius: 20,
-    objectFit: "contain",
+    // objectFit: "contain",
   },
 });
