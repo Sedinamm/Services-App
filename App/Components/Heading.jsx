@@ -1,10 +1,19 @@
-import { View, Text } from "react-native";
+import { View, Text, StyleSheet } from "react-native";
 import React from "react";
 
-export default function Heading() {
+export default function Heading({ text, isViewAll = false }) {
   return (
     <View>
-      <Text>Heading</Text>
+      <Text style={styles.textHeading}>{text}</Text>
     </View>
   );
 }
+
+const styles = StyleSheet.create({
+  textHeading: {
+    fontSize: 20,
+    fontFamily: "outfit-medium",
+    marginBottom: 10,
+    // color: "white",
+  },
+});
