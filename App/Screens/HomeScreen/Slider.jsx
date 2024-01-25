@@ -7,6 +7,8 @@ export default function Slider() {
   useEffect(() => {
     getSliders();
   }, []);
+
+  // Get Slider from API
   const getSliders = () => {
     GlobalApi.getSlider().then((resp) => {
       console.log("resp", resp);
