@@ -19,7 +19,7 @@ export default function Categories() {
   return (
     <View style={{ marginTop: 10 }}>
       {/* <Text>Categories</Text> */}
-      <Heading text={"Categories"} />
+      <Heading text={"Categories"} isViewAll={true} />
     </View>
   );
 }

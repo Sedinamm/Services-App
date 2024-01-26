@@ -5,7 +5,7 @@ export default function Heading({ text, isViewAll = false }) {
   return (
     <View style={styles.container}>
       <Text style={styles.textHeading}>{text}</Text>
-      <Text>View All</Text>
+      {isViewAll && <Text>View All</Text>}
     </View>
   );
 }
