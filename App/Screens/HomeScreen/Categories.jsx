@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, FlatList, Image } from "react-native";
 import React, { useEffect, useState } from "react";
 import GlobalApi from "../../Utils/GlobalApi";
 import Heading from "../../Components/Heading";
@@ -20,6 +20,32 @@ export default function Categories() {
     <View style={{ marginTop: 10 }}>
       {/* <Text>Categories</Text> */}
       <Heading text={"Categories"} isViewAll={true} />
+      <FlatList
+        data={categories}
+        numColumns={4}
+        renderItem={({ item, index }) => (
+          <View style={styles.container}>
+            <View style={styles.iconsContainer}>
+              <Image
+                source={{ uri: item?.icon?.url }}
+                style={{ width: 30, height: 30 }}
+              />
+            </View>
+          </View>
+        )}
+      />
     </View>
   );
 }
+
+const styles = StyleSheet.create({
+  iconsContainer: {
+    backgroundColor: "#EDEDED",
+    padding: 17,
+    borderRadius: 99,
+  },
+  container: {
+    flex: 1,
+    alignItems: "center",
+  },
+});
