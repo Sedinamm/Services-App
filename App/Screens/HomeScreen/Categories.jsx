@@ -1,6 +1,7 @@
 import { View, Text, StyleSheet } from "react-native";
 import React, { useEffect, useState } from "react";
 import GlobalApi from "../../Utils/GlobalApi";
+import Heading from "../../Components/Heading";
 
 export default function Categories() {
   const [categories, setCategories] = useState([]);
@@ -16,8 +17,9 @@ export default function Categories() {
     });
   };
   return (
-    <View>
-      <Text>Categories</Text>
+    <View style={{ marginTop: 10 }}>
+      {/* <Text>Categories</Text> */}
+      <Heading text={"Categories"} />
     </View>
   );
 }
