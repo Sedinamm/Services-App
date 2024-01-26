@@ -3,13 +3,20 @@ import React from "react";
 
 export default function Heading({ text, isViewAll = false }) {
   return (
-    <View>
+    <View style={styles.container}>
       <Text style={styles.textHeading}>{text}</Text>
+      <Text>View All</Text>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
+  container: {
+    display: "flex",
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+  },
   textHeading: {
     fontSize: 20,
     fontFamily: "outfit-medium",
