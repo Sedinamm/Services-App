@@ -2,6 +2,7 @@ import { View, Text, FlatList } from "react-native";
 import React, { useEffect, useState } from "react";
 import Heading from "../../Components/Heading";
 import GlobalApi from "../../Utils/GlobalApi";
+import BusinessListItemSmall from "./BusinessListItemSmall";
 
 export default function BusinessList() {
   const [BusinessList, setBusinessList] = useState([]);
@@ -23,7 +24,7 @@ export default function BusinessList() {
         data={BusinessList}
         renderItem={({ item, index }) => (
           <View>
-            <Text>{item.name}</Text>
+            <BusinessListItemSmall business={item} />
           </View>
         )}
       />
