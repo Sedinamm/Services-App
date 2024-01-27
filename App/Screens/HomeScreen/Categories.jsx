@@ -31,6 +31,9 @@ export default function Categories() {
                 style={{ width: 30, height: 30 }}
               />
             </View>
+            <Text style={{ fontFamily: "outfit-medium", marginTop: 5 }}>
+              {item?.name}
+            </Text>
           </View>
         )}
       />
