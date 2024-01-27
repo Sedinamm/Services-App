@@ -1,8 +1,21 @@
 import { View, Text } from "react-native";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Heading from "../../Components/Heading";
+import GlobalApi from "../../Utils/GlobalApi";
 
 export default function BusinessList() {
+  const [BusinessList, setBusinessList] = useState([]);
+  useEffect(() => {
+    getBusinessList();
+  }, []);
+
+  //   Getting Business List from API
+  const getBusinessList = () => {
+    GlobalApi.getBusinessList().then((resp) => {
+      console.log(resp);
+      setBusinessList(resp.businessLists);
+    });
+  };
   return (
     <View style={{ marginTop: 10 }}>
       <Heading text={"Latest Business"} isViewAll={true} />
