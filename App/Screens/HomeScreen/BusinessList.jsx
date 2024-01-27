@@ -1,4 +1,4 @@
-import { View, Text } from "react-native";
+import { View, Text, FlatList } from "react-native";
 import React, { useEffect, useState } from "react";
 import Heading from "../../Components/Heading";
 import GlobalApi from "../../Utils/GlobalApi";
@@ -19,6 +19,14 @@ export default function BusinessList() {
   return (
     <View style={{ marginTop: 10 }}>
       <Heading text={"Latest Business"} isViewAll={true} />
+      <FlatList
+        data={BusinessList}
+        renderItem={({ item, index }) => (
+          <View>
+            <Text>{item.name}</Text>
+          </View>
+        )}
+      />
     </View>
   );
 }
