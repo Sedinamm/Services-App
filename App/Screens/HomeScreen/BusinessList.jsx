@@ -21,9 +21,11 @@ export default function BusinessList() {
     <View style={{ marginTop: 10 }}>
       <Heading text={"Latest Business"} isViewAll={true} />
       <FlatList
+        horizontal={true}
+        showsHorizontalScrollIndicator={false}
         data={BusinessList}
         renderItem={({ item, index }) => (
-          <View>
+          <View style={{ marginRight: 10 }}>
             <BusinessListItemSmall business={item} />
           </View>
         )}

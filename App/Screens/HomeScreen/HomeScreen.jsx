@@ -1,4 +1,4 @@
-import { View, Text } from "react-native";
+import { View, Text, ScrollView } from "react-native";
 import React from "react";
 import Header from "./Header";
 import Slider from "./Slider";
@@ -7,7 +7,7 @@ import BusinessList from "./BusinessList";
 
 export default function HomeScreen() {
   return (
-    <View>
+    <ScrollView>
       {/* Header */}
       <Header />
       {/* Slider */}
@@ -18,6 +18,6 @@ export default function HomeScreen() {
         {/* Business List */}
         <BusinessList />
       </View>
-    </View>
+    </ScrollView>
   );
 }
