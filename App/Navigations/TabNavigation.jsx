@@ -7,6 +7,7 @@ import BookingScreen from "../Screens/BookingScreen/BookingScreen";
 
 import { MaterialIcons } from "@expo/vector-icons";
 import { FontAwesome } from "@expo/vector-icons";
+import HomeNavigation from "./HomeNavigation";
 
 const Tab = createBottomTabNavigator();
 
@@ -20,7 +21,7 @@ export default function TabNavigation() {
     >
       <Tab.Screen
         name="home"
-        component={HomeScreen}
+        component={HomeNavigation}
         options={{
           tabBarLabel: ({ color }) => (
             <Text style={{ color: color, fontSize: 12, marginTop: -7 }}>
