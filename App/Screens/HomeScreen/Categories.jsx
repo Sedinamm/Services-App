@@ -32,7 +32,7 @@ export default function Categories() {
         numColumns={4}
         renderItem={({ item, index }) =>
           index <= 3 && (
-            <View style={styles.container}>
+            <TouchableOpacity style={styles.container}>
               <View style={styles.iconsContainer}>
                 <Image
                   source={{ uri: item?.icon?.url }}
@@ -42,7 +42,7 @@ export default function Categories() {
               <Text style={{ fontFamily: "outfit-medium", marginTop: 5 }}>
                 {item?.name}
               </Text>
-            </View>
+            </TouchableOpacity>
           )
         }
       />
