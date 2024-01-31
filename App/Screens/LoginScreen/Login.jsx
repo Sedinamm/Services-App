@@ -50,8 +50,12 @@ export default function Login() {
     <View style={{ alignItems: "center", flex: 1 }}>
       <Image
         style={styles.loginImage}
-        source={require("./../../../assets/Images/111.jpg")}
+        source={require("./../../../assets/Images/1.jpg")}
       />
+      <View style={styles.textContainer}>
+        <Text style={styles.title}>Spotless Hub</Text>
+        <Text style={styles.description}>Elevate your space effortlessly.</Text>
+      </View>
     </View>
   );
 }
@@ -62,32 +66,22 @@ const styles = StyleSheet.create({
     height: "100%",
     position: "absolute",
   },
-  subContainer: {
-    width: "100%",
-    width: 360,
-    backgroundColor: "#8E3FFF",
-    height: "50%",
-    marginTop: -20,
-    borderTopRightRadius: 30,
-    borderTopLeftRadius: 30,
-    padding: 20,
+  textContainer: {
+    flex: 1,
+    justifyContent: "flex-end",
+    // alignItems: "center",
+    marginBottom: "40%",
   },
-  subContainerText: {
-    fontSize: 23,
-    color: "white",
-    textAlign: "center",
-    marginTop: 10,
-  },
-  subContainerTextEdited: {
+  title: {
+    fontSize: 36,
     fontWeight: "bold",
-    color: "gold",
-    fontStyle: "italic",
-  },
-  description1: {
-    fontSize: 15,
     color: "white",
-    textAlign: "center",
-    marginTop: 20,
+    marginBottom: 7,
+  },
+  description: {
+    fontSize: 18,
+    color: "white",
+    marginBottom: 20,
   },
   button: {
     backgroundColor: "green",
