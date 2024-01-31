@@ -37,7 +37,7 @@ export default function Header() {
             name="search"
             style={styles.searchButton}
             size={24}
-            color="blue"
+            color="black"
           />
         </View>
       </View>
