@@ -28,7 +28,7 @@ export default function Header() {
               </Text>
             </View>
           </View>
-          <FontAwesome name="bookmark-o" size={27} color="white" />
+          {/* <FontAwesome name="bookmark-o" size={27} color="white" /> */}
         </View>
         {/* Search Bar Section */}
         <View style={styles.searchBarContainer}>
@@ -49,7 +49,8 @@ const styles = StyleSheet.create({
   container: {
     padding: 20,
     paddingTop: 40,
-    backgroundColor: "#0096FF",
+    backgroundColor: "#000",
+    // backgroundColor: "#0096FF",
     borderBottomLeftRadius: 25,
     borderBottomRightRadius: 25,
   },
