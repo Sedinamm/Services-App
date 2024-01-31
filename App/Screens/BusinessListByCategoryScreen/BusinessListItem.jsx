@@ -13,13 +13,17 @@ export default function BusinessListItem({ business }) {
     <View style={styles.container}>
       <Image source={{ uri: business?.images[0]?.url }} style={styles.image} />
       <View style={styles.subContainer}>
+        {/* Name */}
         <Text style={{ fontFamily: "outfit", color: "gray", fontSize: 15 }}>
           {business.contactPerson}
         </Text>
+        {/* Business */}
         <Text style={{ fontFamily: "outfit-bold", fontSize: 18 }}>
           {business.name}
         </Text>
+        {/* Address */}
         <Text style={{ fontFamily: "outfit", color: "gray", fontSize: 12 }}>
+          <Ionicons name="location-sharp" size={18} color="#0096FF" />
           {business.address}
         </Text>
       </View>

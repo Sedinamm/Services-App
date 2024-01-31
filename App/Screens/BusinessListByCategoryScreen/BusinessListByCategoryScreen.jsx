@@ -33,10 +33,25 @@ export default function BusinessListByCategoryScreen() {
           {param?.category}
         </Text>
       </TouchableOpacity>
-      <FlatList
-        data={businessList}
-        renderItem={({ item, index }) => <BusinessListItem business={item} />}
-      />
+      {businessList?.length > 0 ? (
+        <FlatList
+          data={businessList}
+          style={{ marginTop: 15 }}
+          renderItem={({ item, index }) => <BusinessListItem business={item} />}
+        />
+      ) : (
+        <Text
+          style={{
+            fontFamily: "outfit-medium",
+            fontSize: 20,
+            textAlign: "center",
+            marginTop: "20%",
+            color: "gray",
+          }}
+        >
+          No Business Found
+        </Text>
+      )}
     </View>
   );
 }
