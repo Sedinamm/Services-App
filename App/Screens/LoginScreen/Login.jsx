@@ -54,8 +54,17 @@ export default function Login() {
       />
       <View style={styles.textContainer}>
         <Text style={styles.title}>Spotless Hub</Text>
-        <Text style={styles.description}>Elevate your space effortlessly.</Text>
+        <Text style={styles.description}>
+          Elevate your space
+          <Text style={{ fontStyle: "italic", color: "yellow" }}>
+            {" "}
+            effortlessly.
+          </Text>
+        </Text>
       </View>
+      <TouchableOpacity style={styles.button} onPress={onPress}>
+        <Text style={styles.buttonText}>Lets Get Started</Text>
+      </TouchableOpacity>
     </View>
   );
 }
@@ -69,31 +78,31 @@ const styles = StyleSheet.create({
   textContainer: {
     flex: 1,
     justifyContent: "flex-end",
-    // alignItems: "center",
-    marginBottom: "40%",
+    // marginBottom: "30%",
+    paddingRight: "33%",
   },
   title: {
-    fontSize: 36,
+    fontSize: 30,
     fontWeight: "bold",
     color: "white",
-    marginBottom: 7,
   },
   description: {
-    fontSize: 18,
+    fontSize: 16,
     color: "white",
-    marginBottom: 20,
+    marginBottom: 50,
   },
   button: {
-    backgroundColor: "green",
-    paddingVertical: 12,
+    backgroundColor: "#fff",
+    paddingVertical: 16,
     borderRadius: 5,
-    height: 50,
-    marginTop: 50,
+    width: "90%",
+    marginBottom: 40,
+    marginTop: 30,
   },
   buttonText: {
     textAlign: "center",
     fontSize: 15,
-    color: "#fff",
-    // color: "#8E3FFF",
+    // color: "#007BFF",
+    color: "#000",
   },
 });
