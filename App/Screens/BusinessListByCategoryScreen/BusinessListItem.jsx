@@ -7,10 +7,11 @@ import {
 } from "react-native";
 import React from "react";
 import { Ionicons } from "@expo/vector-icons";
+import { TouchableOpacity } from "react-native-gesture-handler";
 
 export default function BusinessListItem({ business }) {
   return (
-    <View style={styles.container}>
+    <TouchableOpacity style={styles.container}>
       <Image source={{ uri: business?.images[0]?.url }} style={styles.image} />
       <View style={styles.subContainer}>
         {/* Name */}
@@ -27,7 +28,7 @@ export default function BusinessListItem({ business }) {
           {business.address}
         </Text>
       </View>
-    </View>
+    </TouchableOpacity>
   );
 }
 
