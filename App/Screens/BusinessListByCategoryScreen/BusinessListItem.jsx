@@ -4,10 +4,11 @@ import {
   TextBusinessListItem,
   Image,
   StyleSheet,
+  TouchableOpacity,
 } from "react-native";
 import React from "react";
 import { Ionicons } from "@expo/vector-icons";
-import { TouchableOpacity } from "react-native-gesture-handler";
+// import { TouchableOpacity } from "react-native-gesture-handler";
 
 export default function BusinessListItem({ business }) {
   return (
